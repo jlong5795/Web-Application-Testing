@@ -1,8 +1,7 @@
 import React from 'react';
 
-const Display = () => {
+const Display = (props) => {
     
-
     return (
         <div className="container">
             <section className="scoreboard">
@@ -10,13 +9,13 @@ const Display = () => {
                     <div className="balls">
                         <h2 className="ball_label">Balls</h2>
                         <div className="ball_count">
-                            {balls}
+                            <p>{props.balls}</p>
                         </div>
                     </div>
                     <div className="strikes">
                         <h2 className="strike_label">Strikes</h2>
                         <div className="strike_count">
-                            {stikes}
+                            <p>{props.strikes}</p>
                         </div>
                     </div>
                 </div>

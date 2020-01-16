@@ -1,9 +1,20 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import * as rtl from '@testing-library/react';
 import App from './App';
+import Display from './components/Display';
+import Dashboard from './components/Dashboard';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders main app', () => {
+  rtl.render(<App />);
+ 
 });
+
+test('checks if display has rendered', () => {
+  rtl.render(<Display />);
+});
+
+test('checks if dashboard has rendered', () => {
+  rtl.render(<Dashboard />);
+});
+
+
